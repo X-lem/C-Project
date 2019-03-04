@@ -4,8 +4,7 @@
 #include <iostream>
 #include <string>
 
-#include "Item.h"
-#include "Coin.h"
+#include "Items/ItemHeaders.h"
 
 using std::cout;
 using std::string;

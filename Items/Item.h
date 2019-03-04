@@ -6,6 +6,8 @@
 
 
 class Item {
+  private:
+    string _name;
 
   public:
     Item() {};

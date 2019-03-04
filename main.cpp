@@ -1,16 +1,12 @@
 #include <iostream>
 #include <string>
 
-#include "Character.h"
-#include "Samuel.h"
-#include "Titus.h"
-
-#include "Monster.h"
-#include "PeaPod.h"
+#include "Characters/CharacterHeaders.h"
+#include "Monsters/MonsterHeaders.h"
+#include "Items/ItemHeaders.h"
 
 #include "ItemDrop.h"
-#include "Item.h"
-#include "Coin.h"
+
 
 using std::cout;
 using std::string;
