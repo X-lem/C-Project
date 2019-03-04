@@ -13,17 +13,21 @@ using std::string;
 
 int main() {
   Titus titus;
-  Samuel sam;
 
-  sam.hit(titus.getDamage());
-  sam.logInfo();
+  Sword s;
+
+  titus.setEquipedItem(s);
 
   PeaPod p;
-  p.hit(sam.getDamage());
-  p.hit(sam.getDamage());
-  p.hit(sam.getDamage());
+  p.hit(titus.getDamage());
 
   p.logInfo();
+
+  titus.dropItem();
+
+  PeaPod p2;
+  p2.hit(titus.getDamage());
+
 
   return 0;
 }

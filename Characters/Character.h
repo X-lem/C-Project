@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "Items/ItemHeaders.h"
 
 using std::cout;
 using std::string;
@@ -13,6 +14,9 @@ class Character {
     double _maxHealth;
     double _health;
     double _attack = 15;
+
+    Weapon _equipedItem;
+    bool isItemEquiped = false;
 
   protected:
     void setMaxHealth(double health) {
@@ -40,7 +44,13 @@ class Character {
       return _health;
     }
     double getDamage() {
-      return _attack;
+
+      if (isItemEquiped) {
+        return _equipedItem.getDamage();
+      } else {
+        return _attack;
+      }
+
     }
     void logInfo() {
       cout << _name << " " << _health << "/" << _maxHealth << '\n';
@@ -50,6 +60,14 @@ class Character {
         return false;
       }
       return true;
+    }
+
+    void setEquipedItem(Weapon item) {
+      isItemEquiped = true;
+      _equipedItem = item;
+    }
+    void dropItem() {
+      isItemEquiped = false;
     }
 };
 

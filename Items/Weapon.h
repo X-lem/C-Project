@@ -6,7 +6,7 @@
 
 #include "Item.h"
 
-class Weapon : Item {
+class Weapon : public Item {
   private:
     double _range; // Might need to be int
     double _damage;
