@@ -21,7 +21,7 @@ class Monster {
     void setMaxHealth(double health) {
       _maxHealth = health;
     }
-    void setDamage(double damage) {
+    void setAttack(double damage) {
       _attack = damage;
     }
     void setName(string name) {
@@ -57,7 +57,7 @@ class Monster {
     double getHealth() {
       return _health;
     }
-    double getDamage() {
+    double getAttack() {
       return _attack;
     }
     void kill() {

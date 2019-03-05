@@ -10,7 +10,7 @@ class Titus : public Character {
     Titus() {
       setMaxHealth(275);
       fullHeal();
-      setDamage(25);
+      setAttack(25);
       setName("Titus");
     };
 };

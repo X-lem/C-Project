@@ -16,17 +16,23 @@ int main() {
 
   Sword s;
 
-  titus.setEquipedItem(s);
+  titus.setEquipedWeapon(s);
 
   PeaPod p;
-  p.hit(titus.getDamage());
+  p.hit(titus.getAttack());
 
   p.logInfo();
 
-  titus.dropItem();
+  Shield sh;
+
+  titus.dropWeapon();
+  titus.setEquipedArmor(sh);
 
   PeaPod p2;
-  p2.hit(titus.getDamage());
+  p2.hit(titus.getAttack());
+
+  titus.hit(p2.getAttack());
+  titus.logInfo();
 
 
   return 0;

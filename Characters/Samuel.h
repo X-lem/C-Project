@@ -11,7 +11,7 @@ class Samuel : public Character {
       setMaxHealth(200);
       fullHeal();
       setName("Samuel");
-      setDamage(20);
+      setAttack(20);
     };
 };
 

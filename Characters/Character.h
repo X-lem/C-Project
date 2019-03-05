@@ -15,14 +15,17 @@ class Character {
     double _health;
     double _attack = 15;
 
-    Weapon _equipedItem;
-    bool isItemEquiped = false;
+    Weapon _equipedWeapon;
+    bool _isWeaponEquiped = false;
+
+    Armor _equipedArmor;
+    bool _isArmorEquiped = false;
 
   protected:
     void setMaxHealth(double health) {
       _maxHealth = health;
     }
-    void setDamage(double damage) {
+    void setAttack(double damage) {
       _attack = damage;
     }
     void setName(string name) {
@@ -35,7 +38,12 @@ class Character {
   public:
     Character() {};
     void hit(double damage) {
-      _health -= damage;
+      if (_isArmorEquiped){
+        _health -= (damage - _equipedArmor.getprotection());
+      }
+      else {
+        _health -= damage;
+      }
     }
     string getName() {
       return _name;
@@ -43,14 +51,12 @@ class Character {
     double getHealth() {
       return _health;
     }
-    double getDamage() {
-
-      if (isItemEquiped) {
-        return _equipedItem.getDamage();
+    double getAttack() {
+      if (_isWeaponEquiped) {
+        return _equipedWeapon.getAttack();
       } else {
         return _attack;
       }
-
     }
     void logInfo() {
       cout << _name << " " << _health << "/" << _maxHealth << '\n';
@@ -62,12 +68,20 @@ class Character {
       return true;
     }
 
-    void setEquipedItem(Weapon item) {
-      isItemEquiped = true;
-      _equipedItem = item;
+    void setEquipedWeapon(Weapon item) {
+      _isWeaponEquiped = true;
+      _equipedWeapon = item;
     }
-    void dropItem() {
-      isItemEquiped = false;
+    void dropWeapon() {
+      _isWeaponEquiped = false;
+    }
+
+    void setEquipedArmor(Armor item) {
+      _isArmorEquiped = true;
+      _equipedArmor = item;
+    }
+    void dropArmor() {
+      _isArmorEquiped = false;
     }
 };
 

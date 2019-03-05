@@ -10,10 +10,8 @@ class Sword : public Weapon {
   Sword() {
     setName("Sword");
     setRange(1);
-    setDamage(50);
+    setAttack(50);
   }
-
-
 };
 
 #endif // SWORD_H

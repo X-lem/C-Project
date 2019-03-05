@@ -15,7 +15,7 @@ class Weapon : public Item {
     void setRange(double range) {
       _range = range;
     }
-    void setDamage(double damage) {
+    void setAttack(double damage) {
       _damage = damage;
     }
 
@@ -24,7 +24,7 @@ class Weapon : public Item {
     double getRange() {
       return _range;
     }
-    double getDamage() {
+    double getAttack() {
       return _damage;
     }
 };

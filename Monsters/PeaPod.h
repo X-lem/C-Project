@@ -11,9 +11,9 @@ class PeaPod : public Monster {
       setMaxHealth(50);
       fullHeal();
       setName("PeaPod");
-      setDamage(15);
+      setAttack(5);
       setValue(10);
     }
 };
 
-#endif PEA_POD_H
+#endif // PEA_POD_H
