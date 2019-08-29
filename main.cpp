@@ -7,7 +7,6 @@
 
 #include "ItemDrop.h"
 
-
 using std::cout;
 using std::string;
 
@@ -33,7 +32,6 @@ int main() {
 
   titus.hit(p2.getAttack());
   titus.logInfo();
-
 
   return 0;
 }

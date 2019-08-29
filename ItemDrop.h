@@ -21,7 +21,6 @@ class ItemDrop {
 
       // Nothing - Coin
       if (value <= 10) {
-        cout << "test 1" << '\n';
         srand(time(0));
         int num = rand() % 2;
         string reward;
@@ -67,7 +66,6 @@ class ItemDrop {
       Gold g;
       return g.dropCoin();
     }
-
 };
 
 #endif // ITEM_DROP_H

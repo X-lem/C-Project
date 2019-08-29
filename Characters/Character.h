@@ -38,8 +38,11 @@ class Character {
   public:
     Character() {};
     void hit(double damage) {
-      if (_isArmorEquiped){
-        _health -= (damage - _equipedArmor.getprotection());
+      if (_isArmorEquiped) {
+        damage -= _equipedArmor.getDefense();
+        if (damage < 0) { damage = 0; }
+
+        _health -= damage;
       }
       else {
         _health -= damage;
@@ -68,6 +71,7 @@ class Character {
       return true;
     }
 
+    // Weapon actions
     void setEquipedWeapon(Weapon item) {
       _isWeaponEquiped = true;
       _equipedWeapon = item;
@@ -76,6 +80,7 @@ class Character {
       _isWeaponEquiped = false;
     }
 
+    // Armor actions
     void setEquipedArmor(Armor item) {
       _isArmorEquiped = true;
       _equipedArmor = item;

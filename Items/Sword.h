@@ -7,11 +7,11 @@
 class Sword : public Weapon {
   
   public:
-  Sword() {
-    setName("Sword");
-    setRange(1);
-    setAttack(50);
-  }
+    Sword() {
+      setName("Sword");
+      setRange(1);
+      setAttack(50);
+    }
 };
 
 #endif // SWORD_H
